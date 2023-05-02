@@ -63,8 +63,8 @@ flake8==5.0.4 \
     # via
     #   -r dev-requirements.in
     #   flake8-pyproject
-flake8-pyproject==1.2.2 \
-    --hash=sha256:52d412219e7db6227faa654675b1435947b11d49b453f3eced760f19bdd6f06a
+flake8-pyproject==1.2.3 \
+    --hash=sha256:6249fe53545205af5e76837644dc80b4c10037e73a0e5db87ff562d75fb5bd4a
     # via -r dev-requirements.in
 importlib-metadata==4.2.0 \
     --hash=sha256:057e92c15bc8d9e8109738a48db0ccb31b4d9d5cfbee5a8670879a30be66304b \

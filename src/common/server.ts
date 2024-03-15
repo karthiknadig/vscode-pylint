@@ -28,7 +28,6 @@ async function createServer(
 ): Promise<LanguageClient> {
     const command = settings.interpreter[0];
     const cwd = settings.cwd === '${fileDirname}' ? Uri.parse(settings.workspace).fsPath : settings.cwd;
-
     // Set debugger path needed for debugging Python code.
     const newEnv = { ...process.env };
     const debuggerPath = await getDebuggerPath();
@@ -56,6 +55,7 @@ async function createServer(
             ? settings.interpreter.slice(1).concat([SERVER_SCRIPT_PATH])
             : settings.interpreter.slice(1).concat([DEBUG_SERVER_SCRIPT_PATH]);
     traceInfo(`Server run command: ${[command, ...args].join(' ')}`);
+    traceInfo(`Server run CWD: ${cwd}`);
 
     const serverOptions: ServerOptions = {
         command,
